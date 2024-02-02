@@ -1728,8 +1728,8 @@
 			color: #fff;
 			content: '\f078';
 			display: block;
-			height: 2.75em;
-			line-height: 2.75em;
+			height: 2em;
+			line-height: 2em;
 			position: absolute;
 			right: 0;
 			text-align: center;
@@ -3257,7 +3257,7 @@
 			content: '';
 			display: block;
 			display: none;
-			height: 90%;
+			height: 80%;
 			left: 0;
 			position: fixed;
 			top: 0;
