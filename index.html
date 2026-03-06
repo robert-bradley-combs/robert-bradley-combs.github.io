@@ -1,134 +1,1394 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-79P8PY4ZKL"></script>
-        <script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Robert Bradley-Combs | Cloud-Native Security Architect</title>
+    <meta name="description"
+        content="Cloud-Native Security Architect & Leader — Designing secure, scalable architectures for global operations. Expertise in AWS, Azure, SSE, XDR, CNAPP, and compliance frameworks." />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2300d4aa%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z%22/></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-79P8PY4ZKL"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-79P8PY4ZKL');
-        </script>
-        <link rel="icon" href="images/rbc_cartoon.png">
-        <title>Robert Bradley-Combs</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({
-                               tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-                               });
-        </script>
-        <script type="text/javascript"
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        </script> 
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    </script>
 
-          ga('create', 'UA-97381584-1', 'auto');
-          ga('send', 'pageview');
+    <style>
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        </script>
-        <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+        :root {
+            --bg-primary: #060b18;
+            --bg-secondary: #0a1128;
+            --bg-card: rgba(12, 22, 45, 0.65);
+            --bg-card-hover: rgba(18, 32, 60, 0.8);
+            --border-card: rgba(0, 212, 170, 0.15);
+            --border-card-hover: rgba(0, 212, 170, 0.4);
+            --accent: #00d4aa;
+            --accent-secondary: #00b4d8;
+            --accent-glow: rgba(0, 212, 170, 0.25);
+            --text-primary: #e8edf5;
+            --text-secondary: rgba(232, 237, 245, 0.6);
+            --text-muted: rgba(232, 237, 245, 0.35);
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+        }
 
-    </head>
-    <body class="landing">
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
 
-        <div id="page-wrapper">
+        body {
+            font-family: var(--font-main);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
 
-                <header id="header" class="alt">
-                        <h1><a href="index.html">Robert Bradley-Combs</a></h1>
-                        <nav id="nav">
-                            <ul>
-                                <li class="special">
-                                    <a href="#menu" class="menuToggle"><span>Menu</span></a>
-                                    <div id="menu">
-                                        <ul>
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="#whoami">About Me</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
-                    </header>
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-                <section id="banner">
-                        <div class="inner">
-                            <h2>Robert Bradley-Combs</h2>
-                            <p>
-                                Cloud-Native Security Architect & Leader<br/>
-                                Designing Secure, Scalable Architectures for Global Operations
-                            </p>
-                        </div>
-                        <a href="#whoami" class="more scrolly">Learn More</a>
-                    </section>
+        a:hover {
+            color: var(--accent-secondary);
+        }
 
-                <section id="whoami" class="wrapper style1 special">
-                    <div class="inner">
-                        <header>
-                            <h2>About Me</h2>
-                            <p><b>Hello!</b></p>
-                            <p>As a cloud-native security professional with over 12 years of experience, I specialize in designing and implementing robust security architectures across AWS and Azure. My expertise lies in translating business risk into actionable, resilient controls, a skill honed through leading global projects that protect thousands of endpoints and ensure critical regulatory compliance, including PCI DSS.</p>
-                            <p>My approach combines strategic architecture with hands-on technical proficiency in a wide range of security technologies (SASE, EDR/XDR, DLP, IDS/IPS, and more). I am adept at integrating security into CI/CD pipelines to accelerate secure development and have a proven track record of architecting secure, scalable solutions for complex, multi-cloud environments. A collaborative leader, I excel at mentoring high-performing teams and engaging with stakeholders to strengthen cybersecurity defenses and drive business continuity.</p>
-							<p>In my free time, I enjoy tinkering with computers and swimming.</p>
-                            
-						</br>
-					</br>
-							<h2>Core Competencies</h2>
-                            <ul style="list-style-type: disc !important; margin-left: 1.5em !important;">
-                                <li><strong>Cloud Platforms:</strong> AWS, Azure, GCP</li>
-                                <li><strong>Cloud Security:</strong> Security Architecture, Governance, Risk Management, Security Assessments, Threat Detection</li>
-                                <li><strong>Security Technologies:</strong> SASE (Netskope), EDR/XDR (Trend Micro), NGFW (Palo Alto), DLP, VPN, CSPM/CNAPP</li>
-                                <li><strong>Compliance & Frameworks:</strong> PCI DSS, GDPR, NIST CSF, CIS Controls</li>
-                            </ul>
-						</br>
-					</br>
-							<p>Feel free to contact me through LinkedIn or via email.</p>
-                            
-                        </header>
-                        
-                        <a href="mailto:sigmas.spots.0q@icloud.com" class="button style2">Email</a>
-                        <a href="https://www.linkedin.com/in/robertbradleycombs/" class="button style2">LinkedIn</a>
-                        
-                        <footer>
-                            <a href="#cta" class="button style2 down more scrolly"></a>
-                        </footer>
-                    </div>
-                </section>
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0 2rem;
+            background: rgba(6, 11, 24, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 212, 170, 0.08);
+            transition: all 0.4s ease;
+        }
 
-                <section id="cta" class="wrapper style4">
-                    <div class="inner">
-                        <header>
-                            <h2>Contact me</h2>
-                            <p>Feel free to contact me via email.</p>
-                        </header>
-                        <ul class="actions vertical">
-                            <li><a href="mailto:sigmas.spots.0q@icloud.com" class="button fit special">Email</a></li>
-                        </ul>
-                    </div>
-                </section>
+        .nav.scrolled {
+            background: rgba(6, 11, 24, 0.92);
+            border-bottom-color: rgba(0, 212, 170, 0.15);
+        }
 
-                <footer id="footer">
-                    <ul class="icons">
-                        <li><a href="mailto:sigmas.spots.0q@icloud.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/robertbradleycombs/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; Robert Bradley-Combs</li>
-                    </ul>
-                </footer>
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
 
+        .nav-logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .nav-logo .logo-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: var(--bg-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .nav-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-secondary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 40%, rgba(0, 212, 170, 0.07) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 80% 60%, rgba(0, 180, 216, 0.05) 0%, transparent 70%),
+                linear-gradient(180deg, transparent 60%, var(--bg-primary) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .hero-label {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--accent);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease 0.3s forwards;
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.5s forwards;
+        }
+
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 560px;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.7s forwards;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            color: var(--bg-primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 30px var(--accent-glow), 0 4px 20px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease 0.9s forwards;
+            text-decoration: none;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 50px var(--accent-glow), 0 8px 30px rgba(0, 0, 0, 0.4);
+            color: var(--bg-primary);
+        }
+
+        .hero-cta svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-cta:hover svg {
+            transform: translateX(4px);
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 1.2s forwards;
+        }
+
+        .hero-scroll-indicator span {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+            animation: scrollPulse 2s ease infinite;
+        }
+
+        /* ============================================
+           SECTIONS — GENERAL
+           ============================================ */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.8;
+            margin-bottom: 3.5rem;
+        }
+
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        .about {
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.85;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
+            padding: 1.8rem;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: all 0.4s ease;
+        }
+
+        .stat-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-card-hover);
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.4rem;
+        }
+
+        /* ============================================
+           EXPERTISE GRID
+           ============================================ */
+        .expertise {
+            background: var(--bg-primary);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .expertise-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expertise-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .expertise-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-card-hover);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px var(--accent-glow);
+        }
+
+        .expertise-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(0, 212, 170, 0.08);
+            border: 1px solid rgba(0, 212, 170, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.4rem;
+            color: var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .expertise-card:hover .card-icon {
+            background: rgba(0, 212, 170, 0.15);
+            border-color: rgba(0, 212, 170, 0.3);
+            transform: scale(1.05);
+        }
+
+        .card-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ============================================
+           EXPERIENCE SECTION
+           ============================================ */
+        .experience {
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, var(--accent), rgba(0, 212, 170, 0.1));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
+            transform: translateX(-4.5px);
+        }
+
+        .timeline-period {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-role {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-company {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        .timeline-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .timeline-tag {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+            color: var(--accent);
+            background: rgba(0, 212, 170, 0.08);
+            border: 1px solid rgba(0, 212, 170, 0.15);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            letter-spacing: 0.04em;
+        }
+
+        /* ============================================
+           CERTIFICATIONS
+           ============================================ */
+        .certs {
+            background: var(--bg-secondary);
+        }
+
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 16px;
+            padding: 1.8rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: all 0.4s ease;
+        }
+
+        .cert-card:hover {
+            border-color: var(--border-card-hover);
+            transform: translateY(-3px);
+        }
+
+        .cert-badge {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(0, 212, 170, 0.1);
+            border: 1px solid rgba(0, 212, 170, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--accent);
+        }
+
+        .cert-badge svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cert-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .cert-issuer {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.2rem;
+        }
+
+        /* ============================================
+           CONTACT / CTA
+           ============================================ */
+        .contact {
+            background: var(--bg-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .contact-inner {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+            color: var(--bg-primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 25px var(--accent-glow);
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 45px var(--accent-glow);
+            color: var(--bg-primary);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            border: 1px solid var(--border-card);
+            transition: all 0.4s ease;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px var(--accent-glow);
+        }
+
+        .btn-primary svg,
+        .btn-secondary svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            padding: 2rem;
+            border-top: 1px solid rgba(0, 212, 170, 0.08);
+            background: var(--bg-primary);
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-links svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scrollPulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scaleY(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scaleY(1.2);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .expertise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 680px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: rgba(6, 11, 24, 0.97);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--border-card);
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                padding-top: 7rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <div class="logo-icon">RC</div>
+                <span>RBC</span>
             </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Overview</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
 
-        <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/skel.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
-    </body>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <p class="hero-label">// Cloud-Native Security Architect</p>
+            <h1 class="hero-title">
+                Secure Systems:<br />
+                <span class="highlight">Architected.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Designing secure, scalable enterprise architectures across AWS and Azure — protecting tens of thousands
+                of endpoints and enabling compliance across global operations.
+            </p>
+            <a href="#expertise" class="hero-cta">
+                Explore Expertise
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about">
+        <div class="section-inner reveal">
+            <p class="section-label">// About Me</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">Building Defenses<br />That Scale</h2>
+                    <p>
+                        Cloud-native security architect with 12+ years of experience designing secure, scalable
+                        enterprise architectures across AWS and Azure. Proven expertise in zero-trust strategy, secure
+                        remote access, and CSPM/CNAPP platforms.
+                    </p>
+                    <p>
+                        I've protected tens of thousands of endpoints and enabled PCI DSS compliance across global
+                        operations. Skilled in embedding security into CI/CD pipelines, reducing vulnerabilities at
+                        scale, and accelerating secure delivery.
+                    </p>
+                    <p>
+                        A collaborative leader who mentors high-performing teams and translates business risk into
+                        actionable, resilient controls. I thrive at the intersection of strategic architecture and
+                        hands-on technical execution.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Cloud Platforms</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10Ks</div>
+                        <div class="stat-label">Endpoints Secured</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Global Sites</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EXPERTISE ===================== -->
+    <section class="expertise" id="expertise">
+        <div class="section-inner reveal">
+            <p class="section-label">// Core Capabilities</p>
+            <h2 class="section-title">Expertise</h2>
+            <p class="section-desc">
+                Strategic security architecture combined with deep technical proficiency across cloud platforms,
+                compliance frameworks, and modern security tooling.
+            </p>
+            <div class="expertise-grid">
+                <!-- Card 1: Cloud Security Architecture -->
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Cloud Security Architecture</h3>
+                    <p class="card-desc">Designing secure, scalable architectures across AWS, Azure, and GCP leveraging
+                        CNAPP, CWPP, and CIEM platforms.</p>
+                </div>
+
+                <!-- Card 2: Threat Detection & Response -->
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Threat Detection & Response</h3>
+                    <p class="card-desc">EDR/XDR, SIEM integration, and proactive threat hunting to identify and
+                        neutralize advanced threats.</p>
+                </div>
+
+                <!-- Card 3: Compliance & Governance -->
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Compliance & Governance</h3>
+                    <p class="card-desc">PCI DSS, GDPR, NIST CSF, and CIS Controls implementation for regulatory
+                        confidence.</p>
+                </div>
+
+                <!-- Card 4: Network Security -->
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="8" rx="2" />
+                            <rect x="2" y="14" width="20" height="8" rx="2" />
+                            <line x1="6" y1="6" x2="6.01" y2="6" />
+                            <line x1="6" y1="18" x2="6.01" y2="18" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Network Security</h3>
+                    <p class="card-desc">SASE, SSE, NGFW, IDS/IPS, VPN, and zero-trust network architectures.</p>
+                </div>
+
+                <!-- Card 5: DevSecOps -->
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">DevSecOps</h3>
+                    <p class="card-desc">Security-integrated CI/CD pipelines, container security, infrastructure-as-code
+                        scanning, and shift-left practices.</p>
+                </div>
+
+                <!-- Card 6: Identity & Access -->
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Identity & Access Management</h3>
+                    <p class="card-desc">IAM strategy, privileged access controls, SSO/MFA, and zero-trust identity
+                        verification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="experience" id="experience">
+        <div class="section-inner reveal">
+            <p class="section-label">// Career Highlights</p>
+            <h2 class="section-title">Experience</h2>
+            <p class="section-desc">
+                A track record of leading security transformation across global enterprises.
+            </p>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-period">2023 – Present</div>
+                    <div class="timeline-role">Manager, Cybersecurity Engineering & Architecture</div>
+                    <div class="timeline-desc">Architecting and leading secure cloud migration and AI workload
+                        deployments across AWS and Azure. Deployed enterprise SSE (Security Service Edge) to tens of
+                        thousands of endpoints. Engineered Conditional Access policies and CIEM infrastructure at scale.
+                        Integrated automated code scanning into CI/CD pipelines and optimized logging pipelines for
+                        improved threat detection. Mentoring a team of cybersecurity professionals.</div>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">AWS</span>
+                        <span class="timeline-tag">Azure</span>
+                        <span class="timeline-tag">SSE</span>
+                        <span class="timeline-tag">Zero Trust</span>
+                        <span class="timeline-tag">PCI DSS</span>
+                        <span class="timeline-tag">CI/CD</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2019 – 2023</div>
+                    <div class="timeline-role">Security Operations Analyst</div>
+                    <div class="timeline-desc">Rapidly engineered enterprise-wide secure remote access solutions for
+                        tens of thousands of employees. Migrated and optimized XDR/EDR and CWPP across large-scale
+                        endpoint
+                        environments. Architected enterprise DLP and NGFW solutions supporting operations across
+                        100+ sites with 99.9% uptime. Primary Incident Handler for critical security threats.</div>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">XDR</span>
+                        <span class="timeline-tag">DLP</span>
+                        <span class="timeline-tag">VPN</span>
+                        <span class="timeline-tag">Incident Response</span>
+                        <span class="timeline-tag">NGFW</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-period">2015 – 2019</div>
+                    <div class="timeline-role">Global Systems Administrator</div>
+                    <div class="timeline-desc">Managed and upgraded a multi-region AWS ecosystem. Designed hybrid
+                        connectivity strategy for 100+ global sites. Provided tier-3 support across global operations.
+                        Co-managed enterprise Active Directory infrastructure at scale. Designed secure remote access
+                        solutions for distributed partner networks.</div>
+                    <div class="timeline-tags">
+                        <span class="timeline-tag">AWS</span>
+                        <span class="timeline-tag">Active Directory</span>
+                        <span class="timeline-tag">Hybrid Cloud</span>
+                        <span class="timeline-tag">Networking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section class="certs" id="certs">
+        <div class="section-inner reveal">
+            <p class="section-label">// Credentials</p>
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-desc">
+                Professional certifications and deep working knowledge of industry security frameworks.
+            </p>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="cert-name">ISC2 CCSP</div>
+                        <div class="cert-issuer">Certified Cloud Security Professional · 2025</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="cert-name">AWS Solutions Architect</div>
+                        <div class="cert-issuer">Amazon Web Services · 2018</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="2" y="2" width="20" height="8" rx="2" />
+                            <rect x="2" y="14" width="20" height="8" rx="2" />
+                            <line x1="6" y1="6" x2="6.01" y2="6" />
+                            <line x1="6" y1="18" x2="6.01" y2="18" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="cert-name">ServiceNow Certified Systems Administrator</div>
+                        <div class="cert-issuer">ServiceNow · 2014</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact" id="contact">
+        <div class="contact-inner reveal">
+            <p class="section-label">// Get In Touch</p>
+            <h2 class="section-title" style="text-align:center;">Let's Connect</h2>
+            <p class="section-desc" style="text-align:center; margin-left:auto; margin-right:auto;">
+                Interested in discussing cloud security architecture, compliance strategy, or collaboration
+                opportunities? I'd love to hear from you.
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:sigmas.spots.0q@icloud.com" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/robertbradleycombs/" target="_blank" rel="noopener noreferrer"
+                    class="btn-secondary">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-copy">&copy; 2026 Robert Bradley-Combs. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="mailto:sigmas.spots.0q@icloud.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/robertbradleycombs/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+        /* ---- PARTICLE CANVAS ANIMATION ---- */
+        (function () {
+            const canvas = document.getElementById('heroCanvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            let animationId;
+            let mouse = { x: null, y: null };
+
+            function resize() {
+                canvas.width = canvas.offsetWidth * window.devicePixelRatio;
+                canvas.height = canvas.offsetHeight * window.devicePixelRatio;
+                ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+            }
+
+            function createParticles() {
+                particles = [];
+                const count = Math.min(100, Math.floor((canvas.offsetWidth * canvas.offsetHeight) / 12000));
+                for (let i = 0; i < count; i++) {
+                    particles.push({
+                        x: Math.random() * canvas.offsetWidth,
+                        y: Math.random() * canvas.offsetHeight,
+                        vx: (Math.random() - 0.5) * 0.4,
+                        vy: (Math.random() - 0.5) * 0.4,
+                        r: Math.random() * 1.8 + 0.5,
+                        alpha: Math.random() * 0.5 + 0.2
+                    });
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
+                const w = canvas.offsetWidth;
+                const h = canvas.offsetHeight;
+
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0) p.x = w;
+                    if (p.x > w) p.x = 0;
+                    if (p.y < 0) p.y = h;
+                    if (p.y > h) p.y = 0;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(0, 212, 170, ${p.alpha})`;
+                    ctx.fill();
+
+                    // Draw connections
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const p2 = particles[j];
+                        const dx = p.x - p2.x;
+                        const dy = p.y - p2.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 150) {
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.strokeStyle = `rgba(0, 212, 170, ${0.08 * (1 - dist / 150)})`;
+                            ctx.lineWidth = 0.6;
+                            ctx.stroke();
+                        }
+                    }
+
+                    // Mouse interaction — gravitational follow + connection lines
+                    if (mouse.x !== null) {
+                        const dx = p.x - mouse.x;
+                        const dy = p.y - mouse.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 250) {
+                            // Gravitational pull toward cursor
+                            const force = (1 - dist / 250) * 0.025;
+                            p.vx -= dx * force;
+                            p.vy -= dy * force;
+                            // Damping so particles orbit smoothly
+                            p.vx *= 0.985;
+                            p.vy *= 0.985;
+
+                            // Draw connection line to cursor
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(mouse.x, mouse.y);
+                            ctx.strokeStyle = `rgba(0, 180, 216, ${0.18 * (1 - dist / 250)})`;
+                            ctx.lineWidth = 0.8;
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                animationId = requestAnimationFrame(draw);
+            }
+
+            window.addEventListener('resize', () => {
+                resize();
+                createParticles();
+            });
+
+            canvas.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
+            canvas.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+
+            resize();
+            createParticles();
+            draw();
+        })();
+
+        /* ---- SCROLL REVEAL ---- */
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+
+        /* ---- NAV SCROLL EFFECT ---- */
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        /* ---- MOBILE NAV TOGGLE ---- */
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+
 </html>
